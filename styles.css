@@ -1,0 +1,151 @@
+/* FiskerPlateExpanded font family */
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Black.ttf") format("truetype");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-BlackItalic.ttf") format("truetype");font-weight:900;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Demibold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-DemiboldItalic.ttf") format("truetype");font-weight:600;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Extrabold.ttf") format("truetype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-ExtraboldItalic.ttf") format("truetype");font-weight:800;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Extralight.ttf") format("truetype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-ExtralightItalic.ttf") format("truetype");font-weight:200;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-LightItalic.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-RegularItalic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Thin.ttf") format("truetype");font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-ThinItalic.ttf") format("truetype");font-weight:100;font-style:italic;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-Ultralight.ttf") format("truetype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"FiskerPlateExpanded";src:url("Font/FiskerPlateExpanded-UltralightItalic.ttf") format("truetype");font-weight:200;font-style:italic;font-display:swap}
+:root{
+  --display:"FiskerPlateExpanded", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --textface: ui-sans-serif, Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --electric-blue:#2676ed;
+  --ink:#0b0b0b;
+  --surface:#0f1115;
+  --card:#131620;
+  --line:rgba(255,255,255,.08);
+  --text:#e8eef8;
+  --muted:#a6b3c6;
+  --radius:18px;
+  --shadow-lg:0 20px 60px rgba(0,0,0,.45), 0 8px 24px rgba(38,118,237,.22);
+  --shadow-sm:0 10px 26px rgba(0,0,0,.35), 0 6px 16px rgba(38,118,237,.18);
+  --container:1200px;
+}
+
+/* Fisker-style typography tuning */
+html{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale }
+h1,h2,h3,.kicker,.brand{ font-family: var(--display); letter-spacing:.02em }
+h1{ font-weight:800; line-height:1.03; letter-spacing:.015em }
+h2{ font-weight:700; line-height:1.08 }
+h3{ font-weight:600; line-height:1.12 }
+.kicker{ text-transform:uppercase; letter-spacing:.24em; font-weight:700; opacity:.9 }
+.nav a{ text-transform:uppercase; letter-spacing:.06em; font-weight:700 }
+.btn{ letter-spacing:.02em }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, Inter, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 700px at 80% -10%, rgba(38,118,237,.20), transparent 60%),
+    radial-gradient(800px 600px at -10% 0%, rgba(38,118,237,.12), transparent 60%),
+    linear-gradient(180deg,#0b0c10 0%, #0e1015 100%);
+}
+.container{max-width:var(--container); margin-inline:auto; padding:0 24px}
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(130%) blur(14px);
+  background:linear-gradient(180deg, rgba(14,16,21,.82), rgba(14,16,21,.68));
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; height:72px; gap:16px}
+.brand{display:flex; align-items:center; gap:12px}
+.brand img{height:40px; width:auto}
+.nav a{color:var(--text); text-decoration:none; font-weight:600; padding:10px 14px; border-radius:999px}
+.nav a:hover{background:rgba(255,255,255,.06)}
+.cta{background:linear-gradient(90deg, var(--electric-blue) 0%, color-mix(in srgb, var(--electric-blue) 70%, white) 100%); color:#fff!important; box-shadow:0 10px 28px rgba(38,118,237,.35)}
+.cta:hover{transform:translateY(-1px)}
+
+.hero{padding:112px 0 80px; text-align:center; position:relative; overflow:visible}
+.hero h1{margin:0 0 16px; font-size:clamp(42px, 6.2vw, 64px); letter-spacing:.2px}
+.hero p{margin:0 auto 28px; max-width:760px; font-size:clamp(18px, 1.3vw, 20px); color:var(--muted)}
+.btn{display:inline-block; padding:14px 22px; border-radius:999px; font-weight:700; text-decoration:none;
+  background:linear-gradient(90deg, var(--electric-blue) 0%, color-mix(in srgb, var(--electric-blue) 70%, white) 100%);
+  color:#fff; border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow-sm)}
+.btn:hover{transform:translateY(-1px)}
+
+.hero-visual{
+  position:absolute;
+  top:10%;
+  left:50%;
+  transform:translateX(-50%);
+  width:1400px;
+  height:700px;
+  pointer-events:none;
+  background:
+    radial-gradient(60% 60% at 50% 35%, rgba(38,118,237,.40), rgba(38,118,237,.14) 45%, transparent 70%),
+    radial-gradient(70% 70% at 50% 20%, rgba(255,255,255,.08), transparent 55%);
+  filter:blur(28px) saturate(120%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 40%, #000 45%, transparent 78%);
+  mask-image: radial-gradient(70% 60% at 50% 40%, #000 45%, transparent 78%);
+}
+
+.section{padding:96px 0}
+.kicker{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#98b0ff; margin-bottom:18px}
+
+.grid{display:grid; gap:28px; grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+  background:linear-gradient(180deg, color-mix(in srgb, #182036 78%, black) 0%, #10131a 100%);
+  border:1px solid var(--line); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow-sm); position:relative;
+}
+.card h3{margin:6px 0 10px; font-size:20px}
+.card p{color:var(--muted); margin:0}
+.card::after{content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0)); opacity:.35; mask:linear-gradient(#fff, transparent 60%)}
+
+.badges{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:18px}
+.badges .chip{border:1px solid rgba(255,255,255,.06); color:var(--muted); padding:8px 14px; border-radius:999px; font-size:14px; background:rgba(255,255,255,.03)}
+
+.partner{display:flex; gap:28px; align-items:center; justify-content:center; padding:32px 0}
+.partner img{height:160px; width:auto; filter:drop-shadow(0 10px 24px rgba(38,118,237,.35))}
+
+.callout{margin-top:32px; background:linear-gradient(180deg, #121522, #0e1118); border:1px solid var(--line); border-radius:24px; padding:36px; text-align:center; box-shadow:var(--shadow-lg)}
+
+footer{padding:56px 0; color:#98a7b6; border-top:1px solid var(--line)}
+small a{color:#b9ccff; text-decoration:none}
+small a:hover{text-decoration:underline}
+
+.reveal{opacity:0; transform:translateY(8px); transition:opacity .6s ease, transform .6s ease}
+.reveal.show{opacity:1; transform:none}
+
+@media (max-width: 980px){
+  .grid{grid-template-columns:1fr 1fr}
+  .partner img{height:128px}
+  .hero-visual{width:1200px; height:600px}
+}
+@media (max-width: 640px){
+  .grid{grid-template-columns:1fr}
+  .nav .hide-sm{display:none}
+  .hero{padding:96px 0 64px}
+  .hero-visual{width:1000px; height:520px}
+}
+
+/* Added: steps, pills, FAQ */
+.steps .card h3{font-size:20px}
+.pillset{display:flex; gap:10px; flex-wrap:wrap}
+.pill{border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03); color:var(--text); padding:10px 14px; border-radius:999px; font-size:14px}
+.faq{max-width:860px; margin-inline:auto}
+.faq details{border:1px solid var(--line); border-radius:14px; padding:14px 18px; background:#0f1220; margin-bottom:12px}
+.faq summary{cursor:pointer; font-weight:600; list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin:8px 0 0; color:var(--muted)}
+
+/* Apply display font to headings */
+h1,h2,h3,.kicker,.brand{font-family:var(--display); letter-spacing:.02em}
+
+body{font-family: var(--textface)}
